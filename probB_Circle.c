@@ -14,7 +14,7 @@ int main()
     double jumlahr = r1 + r2; //jumlah kedua jari jari, digunakan untuk menentukan hubungan kedua lingkaran
     double selisihr = fabs(r1 - r2); // untuk lingkaran di dalam lingkaran
 
-    double eps = 1e-9;
+    double eps = 1e-9; // karena pakai double
 
     // Tidak berpotongan
     if (d > jumlahr + eps || d < selisihr - eps)
