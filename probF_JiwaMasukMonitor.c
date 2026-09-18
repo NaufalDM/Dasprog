@@ -1,47 +1,61 @@
 #include <stdio.h>
 
 int main() {
-    int jumlah;
-    int k1 = 0, k2 = 0, k3 = 0;
-    int total = 0, sisa;
+    int n, m1, m2, m3;
+    int total, sisa;
 
-    scanf("%d", &jumlah);
+    scanf("%d", &n);
 
-    if (jumlah < 1 || jumlah > 3) {
+    if (n < 1 || n > 3) {
         printf("Jumlah misi harus antara 1 dan 3!");
         return 0;
     }
 
-    if (jumlah >= 1) scanf("%d", &k1);
-    if (jumlah >= 2) scanf("%d", &k2);
-    if (jumlah == 3) scanf("%d", &k3);
+    total = 0;
 
-    if (k1 == 1) total += 30;
-    else if (k1 == 2) total += 45;
-    else if (k1 == 3) total += 90;
-    else {
-        printf("Kesulitan yang kamu masukkan tidak valid! Program berhenti.");
-        return 0;
-    }
+    if (n == 1) {
+        scanf("%d", &m1);
 
-    if (jumlah >= 2) {
-        if (k2 == 1) total += 30;
-        else if (k2 == 2) total += 45;
-        else if (k2 == 3) total += 90;
+        if (m1 == 1) total = 30;
+        else if (m1 == 2) total = 45;
+        else if (m1 == 3) total = 90;
         else {
             printf("Kesulitan yang kamu masukkan tidak valid! Program berhenti.");
             return 0;
         }
     }
 
-    if (jumlah == 3) {
-        if (k3 == 1) total += 30;
-        else if (k3 == 2) total += 45;
-        else if (k3 == 3) total += 90;
-        else {
-            printf("Kesulitan yang kamu masukkan tidak valid! Program berhenti.");
-            return 0;
-        }
+    if (n == 2) {
+        scanf("%d%d", &m1, &m2);
+
+        if (m1 == 1) total += 30;
+        else if (m1 == 2) total += 45;
+        else if (m1 == 3) total += 90;
+        else { printf("Kesulitan yang kamu masukkan tidak valid! Program berhenti."); return 0; }
+
+        if (m2 == 1) total += 30;
+        else if (m2 == 2) total += 45;
+        else if (m2 == 3) total += 90;
+        else { printf("Kesulitan yang kamu masukkan tidak valid! Program berhenti."); return 0; }
+    }
+
+    if (n == 3) {
+        scanf("%d%d%d", &m1, &m2, &m3);
+
+        if (m1 == 1) total += 30;
+        else if (m1 == 2) total += 45;
+        else if (m1 == 3) total += 90;
+        else { printf("Kesulitan yang kamu masukkan tidak valid! Program berhenti."); return 0; }
+
+        if (m2 == 1) total += 30;
+        else if (m2 == 2) total += 45;
+        else if (m2 == 3) total += 90;
+        else { printf("Kesulitan yang kamu masukkan tidak valid! Program berhenti."); return 0; }
+
+        if (m3 == 1) total += 30;
+        else if (m3 == 2) total += 45;
+        else if (m3 == 3) total += 90;
+        else { printf("Kesulitan yang kamu masukkan tidak valid! Program berhenti."); return 0; }
     }
 
     sisa = 180 - total;
