@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<math.h>
 int main()
 {
     char kode;
@@ -7,7 +8,7 @@ int main()
     scanf(" %c", &kode);
     if (kode=='d'||kode=='e')
     {
-    scanf("%c",&n);
+    scanf(" %c",&n);
     }
     else
     {
@@ -31,11 +32,7 @@ int main()
     }
     else
     {
-        while (hsementara > 0)// hasil lebih dari 0
-        {
-            digit++;
-            hsementara >>= 1; // menggeser bit ke kanan sampai bit habis, untuk mengetahui jumlah bit
-        }
+        digit = (long)(log2(hasil)) + 1;
     }
 
     if(digit%2==0)
