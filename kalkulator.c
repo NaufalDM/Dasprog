@@ -43,22 +43,13 @@ int main()
 	}
 	else if(op=='%')
 	{
-		hasil=an%bn;
+		hasil=angka1%angka2;
 	}
 	
-	if (hasil<1)
+	hasil = hasil % 52;
+	if (hasil <= 0)
 	{
-		hasil = 52+hasil;
-	}
-	
-	if (hasil>52)
-	{
-		hasil=hasil-52;
-	}
-	
-	if (hasil==0)
-	{
-		hasil = 90;
+    hasil = hasil + 52;	
 	}
 	
 	if(hasil<27)
