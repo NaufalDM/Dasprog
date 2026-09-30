@@ -1,8 +1,8 @@
 #include<stdio.h>
+#include<cs50.h>
 int main()
 {
-	int hasil = -53 % 52;
-
+	string s = "HI!";
 	
-	printf("%d",hasil);
+	printf("%s", s)
 }
