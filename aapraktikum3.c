@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 char s[2000005] = "0";
-long long poske[2000005] = {-1};
+long long poske[2000005] = {0};
 char k[2000005] = "0";
 int main()
 {
@@ -15,6 +15,7 @@ int main()
 	{
 		long long total = 0;
 		long long posisi = 0;
+		poske[z] = -1;
 		scanf("%s", s);
 		for(long long i = 0; s[i] != '\0'; i++)
 		{
